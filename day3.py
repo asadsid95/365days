@@ -5,9 +5,16 @@ def unqElement(plist):
     count = {}
     for i in plist:
         count.setdefault(i, [1])
-        if(count[i] == [1]):
-            count[i].append(1)
-            print(sum(count[i]))
+        print(count[i])
+
+        if(count[1] == 1):
+            pass
+
+    print(count.keys())
+    print(count.values())
+
+    # if(count[i] == [1]):
+    # print(sum(count[i]))
     return 0
 
 
