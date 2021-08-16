@@ -4,11 +4,13 @@ def unqElement(plist):
 
     count = {}
     for i in plist:
-        print(count.setdefault(i, 1))
+        print(i)
+        # Return key's value if key is present OR create new K/V pair with default value
+        count.setdefault(i, [1])
         print(count.values())
 
         if(i == count):  # Since i is integer value, using that as dict's index
-            count[i] += 1
+            count.items
 
     print(count)
 
