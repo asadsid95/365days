@@ -11,7 +11,7 @@ def unqElement(plist):
             if (c == i):
                 d += 1
             else:
-
+                print('0')
 
         print(count.setdefault(i, [1]))
         print(count)
