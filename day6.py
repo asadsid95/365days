@@ -5,18 +5,20 @@ class Solution():
 
     def __init__(self, nums, target):
         self.listtww = nums
-        self.t = target
+        self.target = target
 
     def twoSum(self):
-        print(self.listtww)
 
+        nums_dict = {}
         for n in range(len(self.listtww)):
-            print("hello")
+            diff = self.target - self.listtww[n]
+            print(diff)
+            if diff in nums_dict:
+                return (nums_dict[diff], n)
+            else:
+                nums_dict[diff] = n
 
-        if n in [0, 2, 6]:
-            print('in-if conditional worked!', n)
 
-
-object1 = Solution([1, 6, 2, 5, 6, 6, 9], 7,)
+object1 = Solution([1, 6, 2, 5, 6, 6, 9], 15)
 
 print(object1.twoSum())
