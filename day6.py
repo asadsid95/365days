@@ -12,13 +12,14 @@ class Solution():
         nums_dict = {}
         for n in range(len(self.listtww)):
             diff = self.target - self.listtww[n]
-            print(diff)
+            # print(diff)
             if diff in nums_dict:
-                return (nums_dict[diff], n)
+                print(diff)
             else:
                 nums_dict[diff] = n
+        return (nums_dict[diff], n)
 
 
-object1 = Solution([1, 6, 2, 5, 6, 6, 9], 15)
+object1 = Solution([1, 6, 2, 5, 9, 10], 15)
 
 print(object1.twoSum())
