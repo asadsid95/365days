@@ -42,8 +42,6 @@ class Solution(object):
         return 0
 
 
-trial = Solution(929)
+trial = Solution(92909)
 
 print(trial.isPalindrome())
-
-# Reverse Integer (LC # 7 )
