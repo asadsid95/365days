@@ -1,4 +1,4 @@
-# Two Sum
+# Two Sum (LC # 1)
 # return indices of the 2 vlaue that equated target value, in a list
 
 class Solution():
@@ -12,14 +12,19 @@ class Solution():
         nums_dict = {}
         for n in range(len(self.listtww)):
             diff = self.target - self.listtww[n]
-            # print(diff)
-            if diff in nums_dict:
-                print(diff)
+            # print(n, self.listtww[n], diff)
+            #print(nums_dict.keys())
+
+            if diff in nums_dict.keys():
+                print(n, self.listtww[n])
+                return "done"
             else:
-                nums_dict[diff] = n
-        return (nums_dict[diff], n)
+                nums_dict[n] = n
+        print(nums_dict)
+
+        # return (nums_dict[diff], n)
 
 
-object1 = Solution([1, 6, 2, 5, 9, 10], 15)
+object1 = Solution([1, 6, 2, 5, 9, 10], 11)
 
 print(object1.twoSum())
