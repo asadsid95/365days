@@ -13,18 +13,18 @@ class Solution():
         for n in range(len(self.listtww)):
             diff = self.target - self.listtww[n]
             # print(n, self.listtww[n], diff)
-            #print(nums_dict.keys())
+            #print('this is the dict\'s key list: ',nums_dict.keys())
 
             if diff in nums_dict.keys():
-                print(n, self.listtww[n])
-                return "done"
+                return(nums_dict[diff],n)
+                # print(n, self.listtww[n])
             else:
-                nums_dict[n] = n
+                nums_dict[(self.listtww[n])] = n
         print(nums_dict)
 
         # return (nums_dict[diff], n)
 
 
-object1 = Solution([1, 6, 2, 5, 9, 10], 11)
+object1 = Solution([1, 4, 2, 5, 9, 10], 6)
 
 print(object1.twoSum())

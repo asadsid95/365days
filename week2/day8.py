@@ -42,6 +42,6 @@ class Solution(object):
         return 0
 
 
-trial = Solution(92909)
+trial = Solution(92029)
 
 print(trial.isPalindrome())
