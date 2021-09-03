@@ -32,15 +32,32 @@ class Budget:
         # print(expense)
         # print(self.input.values())
 
-        total_expense = {'Allowable food': 400, 'Allowable clothing': 150, 'Allowable Hobby':100}
+        allowable_expense = {'Allowable food': 400, 'Allowable clothing': 150, 'Allowable Hobby':100}
 
-        for i,j in total_expense.items():
-            print(i,j)
+        # Balances in categories ##
 
-        # for i in self.input.values():
-        #     total_expense -= i
+        # for i in allowable_expense.values():
+        #     print(i)
 
-        print('Total expense: ', total_expense)
+        allow = allowable_expense.values()
+        input = self.input.values()
+
+        # for i,j in allowable_expense.items():
+        #     print(i,j)
+
+        # print(type(allowable_expense.values()))
+        for i in range(len(input)):
+            for j in allow:
+               # print((input(i), '                  ', allow(j))) ### error: 'dict_values' object is not callable
+                print(j - i) ## Learned about augmented assignment statement ; Modifies the actual object vs assigning to target
+
+
+
+        # Transfers between categories ##
+
+
+
+        # print('Total expense: ', type(allowable_expense.values()), type(self.input))
 
         return None
 
@@ -49,18 +66,15 @@ class Budget:
 
 # print("break")
 
-
 def main():
 
     default_value=100
-
 
     data = {'Food': 300, 'Clothing': 100, 'Hobby': default_value}
 
     user_input = Budget(data)
 
-    print(user_input.exps_calc(10000))
-
+    user_input.exps_calc(10000)
 
 if __name__ == "__main__":
     main()
