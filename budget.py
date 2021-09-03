@@ -1,12 +1,13 @@
 # Budget app
-
+'''
 # Problem: Create a Budget class that can instantiate ~~~ objects based on different budget categories ~~~ like food, clothing, and entertainment. These objects should allow for depositing and withdrawing funds from each category, as well computing category balances and transferring balance amounts between categories
 
 # IOW:
 
 # Categories: Food, Clothing, Hobby, Subscriptions, PC equip, coffee
 #
-# Features: expenses i.e. deposit/withdraw funds from each category,
+# Features: expenses,
+#            deposit/withdraw funds from each category,
 #              balances/transfer between categories
 
 # Input: Dict {} of all expenses i.e. transactions history type data
@@ -15,8 +16,8 @@
 # Topics found during reading on Decorators (Credits: https://book.pythontips.com/en/latest/decorators.html ):
 # - Nested function
 # - function as argument for another func.
-# - ANSWER TO LONG-TIME QUESTION: having () in front of functions executes them (i.e. returns whatever code inside of them) BUT w/o them, function itself is assigned to the variables
-
+# - ANSWER TO LONG-TIME QUESTION: having () in front of functions executes them (i.e. returns whatever code's inside of them) BUT w/o them, function itself is assigned to the variables
+'''
 
 class Budget:
     # return 0
@@ -31,10 +32,13 @@ class Budget:
         # print(expense)
         # print(self.input.values())
 
-        total_expense = 0
+        total_expense = {'Allowable food': 400, 'Allowable clothing': 150, 'Allowable Hobby':100}
 
-        for i in self.input.values():
-            total_expense += i
+        for i,j in total_expense.items():
+            print(i,j)
+
+        # for i in self.input.values():
+        #     total_expense -= i
 
         print('Total expense: ', total_expense)
 
@@ -49,6 +53,7 @@ class Budget:
 def main():
 
     default_value=100
+
 
     data = {'Food': 300, 'Clothing': 100, 'Hobby': default_value}
 
