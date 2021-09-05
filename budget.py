@@ -1,23 +1,4 @@
 # Budget app
-'''
-# Problem: Create a Budget class that can instantiate ~~~ objects based on different budget categories ~~~ like food, clothing, and entertainment. These objects should allow for depositing and withdrawing funds from each category, as well computing category balances and transferring balance amounts between categories
-
-# IOW:
-
-# Categories: Food, Clothing, Hobby, Subscriptions, PC equip, coffee
-#
-# Features: expenses,
-#            deposit/withdraw funds from each category,
-#              balances/transfer between categories
-
-# Input: Dict {} of all expenses i.e. transactions history type data
-# Output: expenses, deposit/wd funds from each catg., balances/transfer between categories
-
-# Topics found during reading on Decorators (Credits: https://book.pythontips.com/en/latest/decorators.html ):
-# - Nested function
-# - function as argument for another func.
-# - ANSWER TO LONG-TIME QUESTION: having () in front of functions executes them (i.e. returns whatever code's inside of them) BUT w/o them, function itself is assigned to the variables
-'''
 
 class Budget:
     # return 0
@@ -32,35 +13,45 @@ class Budget:
         # print(expense)
         # print(self.input.values())
 
-        allowable_expense = {'Allowable food': 400, 'Allowable clothing': 150, 'Allowable Hobby':100}
+        allowable_expense = {'Allowable food': 499990, 'Allowable clothing': 150, 'Allowable Hobby':1545540}
 
         # Balances in categories ##
 
-        # for i in allowable_expense.values():
-        #     print(i)
+        allow = list(allowable_expense.values())
+        input = list(self.input.values())
 
-        allow = allowable_expense.values()
-        input = self.input.values()
-
-        # for i,j in allowable_expense.items():
-        #     print(i,j)
-
-        # print(type(allowable_expense.values()))
+        new_list = []
         for i in range(len(input)):
-            for j in allow:
-               # print((input(i), '                  ', allow(j))) ### error: 'dict_values' object is not callable
-                print(j - i) ## Learned about augmented assignment statement ; Modifies the actual object vs assigning to target
 
+            new_list.append(allow[i] - input[i])
+
+        allow = new_list
+        print('Remaining expense: ', allow)
+
+        # Updating values in allowable_expense
+
+        #Attempt # 2 ##
+
+        # Attempt# 1 ##
+        # k=0
+        # for i,j in allowable_expense.items():
+        #     j = allow[k]
+        #     print(k)
+        #     k += 1
+        #     print(k)
+
+        #     print(allowable_expense)
+
+
+        # 2nd approach for balancing (set for another iteration):
+        #   print(tuple(zip(allow, input)))
 
 
         # Transfers between categories ##
 
-
-
         # print('Total expense: ', type(allowable_expense.values()), type(self.input))
 
         return None
-
 
     # print('end of Budget class')
 
@@ -68,9 +59,9 @@ class Budget:
 
 def main():
 
-    default_value=100
+    default_value=103038
 
-    data = {'Food': 300, 'Clothing': 100, 'Hobby': default_value}
+    data = {'Food': 100000, 'Clothing': 100, 'Hobby': default_value}
 
     user_input = Budget(data)
 
