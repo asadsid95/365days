@@ -26,13 +26,17 @@ class Budget:
             new_list.append(allow[i] - input[i])
 
         allow = new_list
-        print('Remaining expense: ', allow)
+        print('Remaining expense (list): ', allow)
 
         # Updating values in allowable_expense
 
         #Attempt # 2 ##
 
-        # Attempt# 1 ##
+
+
+
+        # Attempt# 1: INCORRECT## tldr; changing values via .items() and using counter but that hasnt worked
+
         # k=0
         # for i,j in allowable_expense.items():
         #     j = allow[k]
