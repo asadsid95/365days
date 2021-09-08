@@ -13,20 +13,29 @@ class Budget:
         # print(expense)
         # print(self.input.values())
 
-        allowable_expense = {'Allowable food': 499990, 'Allowable clothing': 150, 'Allowable Hobby':1545540}
+        # allowable_expense = {'Allowable food': 499990, 'Allowable clothing': 150, 'Allowable Hobby':1545540}
+
+        # allowable_categories = ['Allowable food', 'Allowable clothing','Allowable Hobby']
+        # allowable_amounts= [8999, 999,1000]
+        # allowable_expense = dict(zip(allowable_categories,allowable_amounts))
+
+        # print(allowable_expense)
+
+
 
         # Balances in categories ##
 
-        allow = list(allowable_expense.values())
-        input = list(self.input.values())
+        # allow = list(allowable_expense.values())
+        # input = list(self.input.values())
 
-        new_list = []
-        for i in range(len(input)):
+        # First time using List Comph.
+        # new_list = [allow[i] - input[i] for i in range(len(input))]
+        # for i in range(len(input)):
 
-            new_list.append(allow[i] - input[i])
+        #     new_list.append(allow[i] - input[i])
 
-        allow = new_list
-        print('Remaining expense (list): ', allow)
+        # allow = new_list
+        # print('Remaining expense (list): ', allow)
 
         # Updating values in allowable_expense
 
