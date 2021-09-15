@@ -19,3 +19,24 @@
 # Compare first element to val:
     # - If YES (element matches val), pop()/del() that element + increment k
     # - If NO, go to next element (via count increment; look into len(nums))
+
+def remove():
+    nums = [1,2,1,1,3,45]
+    val = 1
+
+    i=0
+    k=0
+    while i < len(nums):
+    # print(nums[i])
+        if nums[i] == val:
+            print('MATCHES! ', i)
+            del(nums[i])
+            print(nums)
+            k+=1
+            # i+=1
+        else:
+            print('No match')
+            i+=1
+    return k
+
+print(remove())
