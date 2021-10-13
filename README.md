@@ -39,3 +39,7 @@ Topics found during reading on Decorators (Credits: https://book.pythontips.com/
 - Nested function
 - function as argument for another func.
 - ANSWER TO LONG-TIME QUESTION: having () in front of functions executes them (i.e. returns whatever code's inside of them) BUT w/o them, function itself is assigned to the variables
+
+----------
+
+This repo will be stale as of 12/10/2021.
